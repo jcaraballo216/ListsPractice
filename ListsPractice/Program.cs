@@ -131,8 +131,8 @@ namespace ListsPractice
             {
                 Console.WriteLine("Please enter a Movie!");
                 favMovie = Console.ReadLine().ToLower();
-                movies.Add(favMovie);
-                if (favMovie.ToLower()== "quit")
+                
+                if (favMovie.ToLower() == "quit")
                 {
                     Console.WriteLine("Thank you for using Movie Finder!");
                 }
@@ -143,16 +143,21 @@ namespace ListsPractice
                 else
                 {
                     Console.WriteLine("That movie is not on the list and will be added.");
+                    movies.Add(favMovie);
                 }
 
             }
             while (favMovie.ToLower() != "quit");
-                {
-                
-                }
+            {
 
-
-
+            }
+            Console.WriteLine("Here is a list of the movies in your collection");
+            foreach (string moreMovies in movies)
+            {
+                Console.WriteLine(moreMovies);
+            }
+           
+               
+            }
         }
     }
-}
