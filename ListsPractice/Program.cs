@@ -123,7 +123,7 @@ namespace ListsPractice
             //if the user enters quit the program should exit
             //the user should be able to add as many movies as they want
 
-            List<string> movies = new List<string> { "Dead Pool", "Anchor Man", "TMNT", "Spider Man" };
+            List<string> movies = new List<string> { "dead pool", "anchor man", "tmnt", "spider man" };
             Console.WriteLine("Welcome to Movie Finder!");
             Console.WriteLine("You may enter \"Quit\" at any time");
             string favMovie;
@@ -148,9 +148,7 @@ namespace ListsPractice
 
             }
             while (favMovie.ToLower() != "quit");
-            {
-
-            }
+                       
             Console.WriteLine("Here is a list of the movies in your collection");
             foreach (string moreMovies in movies)
             {
