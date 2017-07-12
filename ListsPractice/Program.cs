@@ -61,11 +61,96 @@ namespace ListsPractice
 
             //}
 
-            List<string> favoriteFood = new List<string> { "steak", "fish", "katsudon", "Ice Cream", "Nachos" };
-            if (favoriteFood.Contains("fish"))
+            //List<string> favoriteFood = new List<string> { "steak", "fish", "katsudon", "Ice Cream", "Nachos" };
+            //if (favoriteFood.Contains("fish"))
+            //{
+            //    Console.WriteLine("I like fish too!"); 
+            //}
+
+            //Create a list with the following numbers: 1 23 9 77 922 6 32 63 14 5
+            //use the contains method with the following values: 23 77 15
+            //Remove these elements: 23 77 32 and 6
+            //use contains() again on these values:23 77 15
+
+            //List<int> numbers = new List<int>();
+            //numbers.Add(1);
+            //numbers.Add(23);
+            //numbers.Add(9);
+            //numbers.Add(77);
+            //numbers.Add(922);
+            //numbers.Add(6);
+            //numbers.Add(32);
+            //numbers.Add(63);
+            //numbers.Add(14);
+            //numbers.Add(5);
+            //if (numbers.Contains(23))
+            //{
+            //    Console.WriteLine("Thats contained");
+            //}
+            //if (numbers.Contains(77))
+            //{
+            //    Console.WriteLine("Thats contained");
+            //}
+            //if (numbers.Contains(15))
+            //{
+            //    Console.WriteLine("Thats contained");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Contained");
+            //}
+            //if (numbers.Remove(23))
+            //{
+            //    Console.WriteLine("removed");
+            //}
+            //if (numbers.Remove(77))
+            //{
+            //    Console.WriteLine("removed");
+            //}
+            //if (numbers.Remove(32))
+            //{
+            //    Console.WriteLine("removed");
+            //}
+            //if (numbers.Remove(6))
+            //{
+            //    Console.WriteLine("removed");
+            //}
+
+            // Ask the user for a movie 
+            //if the movie is in the list inform them that the movie is on the way
+            //If the movie is not in the list add it
+            //inform the user that the movie has been added
+            //if the user enters quit the program should exit
+            //the user should be able to add as many movies as they want
+
+            List<string> movies = new List<string> { "Dead Pool", "Anchor Man", "TMNT", "Spider Man" };
+            Console.WriteLine("Welcome to Movie Finder!");
+            Console.WriteLine("You may enter \"Quit\" at any time");
+            string favMovie;
+            do
             {
-                Console.WriteLine("I like fish too!");
+                Console.WriteLine("Please enter a Movie!");
+                favMovie = Console.ReadLine().ToLower();
+                movies.Add(favMovie);
+                if (favMovie.ToLower()== "quit")
+                {
+                    Console.WriteLine("Thank you for using Movie Finder!");
+                }
+                else if (movies.Contains(favMovie))
+                {
+                    Console.WriteLine("Your movie is on its way!");
+                }
+                else
+                {
+                    Console.WriteLine("That movie is not on the list and will be added.");
+                }
+
             }
+            while (favMovie.ToLower() != "quit");
+                {
+                
+                }
+
 
 
         }
